@@ -5,16 +5,17 @@ import Consulta from './components/consulta/Consulta';
 function App() {
   return (
     <Switch>
-      <Route patch="/login">
-        <Login/>
-      </Route>
-      <Route patch="/consulta">
+      <Route path="/consulta">
         <Consulta/>
       </Route>
-      <Route patch="/home"/>
-
-      <Route patch="/">
-
+      <Route path="/login">
+        <Login/>
+      </Route>
+      <Route path="/login/register">
+        Soy home!
+      </Route>
+      <Route path="*">
+        404
       </Route>
     </Switch>
   );
